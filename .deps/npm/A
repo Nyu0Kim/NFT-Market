@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using Terser v5.3.5.
+ * Original file: /npm/A@0.0.1/lib/A.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+var Promise=function(){this.pending={success:[],failure:[],progress:[]},this.returnedPromise,this.complete=function(e,s){for(var t;t=e.shift();)s=t(s);this.returnedPromise&&this.returnedPromise.resolve(s),this.handled=e,this.resolve=this.reject=function(){throw new Error("Promise has been resolved")}}};Promise.prototype.then=function(e,s,t){return this.returnedPromise=new Promise,"function"==typeof e&&this.pending.success.push(e),"function"==typeof s&&this.pending.failure.push(s),"function"==typeof t&&this.pending.progress.push(t),this.handled&&this.complete(this.handled,this.value),this.returnedPromise},Promise.prototype.resolve=function(e){this.value=e,this.complete(this.pending.success,e)},Promise.prototype.reject=function(e){this.value=e,this.complete(this.pending.failure,e)},Promise.prototype.progress=function(e){var s,t=this.pending.progress;for(s in t)t[s](e)},exports.Promise=Promise;
+//# sourceMappingURL=/sm/672644adcba0e5bfc09be1e8bdae3205e481f19638ae9fc67d03697c001fc7ca.map
